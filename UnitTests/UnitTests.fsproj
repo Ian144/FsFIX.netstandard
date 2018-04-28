@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="FIXBufFieldIndexTests.fs" />
+    <Compile Include="FieldReadTests.fs" />
+    <Compile Include="UTCTimestampTests.fs" />
+    <Compile Include="UTCDateTests.fs" />
+    <Compile Include="UTCTimeOnlyTests.fs" />
+    <Compile Include="TZOffsetTests.fs" />
+    <Compile Include="TZTimeOnlyTests.fs" />
+    <Compile Include="MonthYearTests.fs" />
+    <Compile Include="FieldWriteTests.fs" />
+    <Compile Include="WriteReadRoundtripTests.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="Unquote" Version="4.0.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FsFix\FsFix.fsproj" />
+  </ItemGroup>
+
+</Project>

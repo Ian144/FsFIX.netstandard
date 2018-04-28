@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="FIXMsgBuffers.fs" />
+    <Compile Include="FIXMsgs.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.10.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FsFix\FsFix.fsproj" />
+  </ItemGroup>
+
+</Project>

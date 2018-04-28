@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.fs" />
+    <Compile Include="OneOrTwo.fs" />
+    <Compile Include="NonEmptyArray.fs" />
+    <Compile Include="Conversions.fs" />
+    <Compile Include="FIXBuf.fs" />
+    <Compile Include="FIXBufIndex.fs" />
+    <Compile Include="FIXDateTime.fs" />
+    <Compile Include="LocalMktDate.fs" />
+    <Compile Include="TZDateTime.fs" />
+    <Compile Include="UTCDateTime.fs" />
+    <Compile Include="MonthYear.fs" />
+    <Compile Include="GenericReaders.fs" />
+    <Compile Include="RawField.fs" />
+    <Compile Include="Fix44.Fields.fs" />
+    <Compile Include="Fix44.FieldReaders.fs" />
+    <Compile Include="Fix44.FieldWriters.fs" />
+    <Compile Include="Fix44.CompoundItems.fs" />
+    <Compile Include="Fix44.CompoundItemFactoryFuncs.fs" />
+    <Compile Include="Fix44.CompoundItemWriters.fs" />
+    <Compile Include="Fix44.CompoundItemReaders.fs" />
+    <Compile Include="Fix44.Messages.fs" />
+    <Compile Include="Fix44.MessageFactoryFunctions.fs" />
+    <Compile Include="Fix44.MsgWriters.fs" />
+    <Compile Include="Fix44.MsgReaders.fs" />
+    <Compile Include="Fix44.MessageDU.fs" />
+    <Compile Include="Fix44.HeaderTrailer.fs" />
+    <Compile Include="MsgReadWrite.fs" />
+  </ItemGroup>
+
+</Project>
