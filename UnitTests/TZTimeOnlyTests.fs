@@ -44,30 +44,27 @@ let ``read UTC hh:mm:ss `` () =
 
 [<Fact>]
 let ``read invalid offset marker from bytes`` () =
-    try
-        let bs = "03:03*06"B
-        TZDateTime.readTZTimeOnly bs 0 bs.Length  |> ignore
-        Xunit.Assert.True false
-    with
-    | _ -> ()
-
-
+    let bs = "03:03*06"B
+    raisesWith<exn> 
+        <@ TZDateTime.readTZTimeOnly bs 0 bs.Length @>
+        (fun ex -> <@ ex.Message = "could not find offset market in TZTimeOnly" @>)
 
 [<Fact>]
 let ``read invalid hours from bytes`` () =
-    try
-        let bs = "25:00Z06"B
-        TZDateTime.readTZTimeOnly bs 0 bs.Length |> ignore
-        Xunit.Assert.True false
-    with
-    | _ -> ()
-
+    let bs = "25:00Z06"B
+    raisesWith<exn> 
+        <@ TZDateTime.readTZTimeOnly bs 0 bs.Length @>
+        (fun ex -> <@ ex.Message = "invalid TZTimeOnly, 25:0" @>)
+    
 
 [<Fact>]
 let ``read invalid mins from bytes`` () =
-    try
-        let bs = "00:60Z06"B
-        TZDateTime.readTZTimeOnly bs 0 bs.Length |> ignore
-        Xunit.Assert.True false
-    with
-    | _ -> ()
+    let bs = "00:60Z06"B
+    raisesWith<exn>
+        <@ TZDateTime.readTZTimeOnly bs 0 bs.Length @>
+        (fun ex -> <@ ex.Message = "invalid TZTimeOnly, 0:60" @>)
+
+
+
+
+

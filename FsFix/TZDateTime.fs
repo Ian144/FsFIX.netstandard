@@ -178,10 +178,11 @@ let inline private isOffsetMarker (bb:byte) =
 let inline private findOffsetMarker (bs:byte[]) (pos:int) =
     if bs.[pos+5] |> isOffsetMarker then
         5
-    elif bs.[pos+8] |> isOffsetMarker then
-        8
     else
-        failwith "could not find offset market in TZTimeOnly"
+        if bs.Length > pos + 8  && bs.[pos+8] |> isOffsetMarker then
+            8
+        else
+            failwith "could not find offset market in TZTimeOnly"
 
 
 let readTZTimeOnly (bs:byte[]) (pos:int) (len:int) =
