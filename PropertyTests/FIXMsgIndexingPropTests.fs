@@ -41,7 +41,6 @@ let bufSize = 82 * 1024
 
 
 
-
 [<PropTest>]
 let ``reconstruct FIX message buf with header and trailer``
         (beginString:BeginString) 
