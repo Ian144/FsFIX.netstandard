@@ -20,4 +20,8 @@
     <ProjectReference Include="..\FsFix\FsFix.fsproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="4.5.0" />
+  </ItemGroup>
+
 </Project>
