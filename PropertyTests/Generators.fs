@@ -45,6 +45,7 @@ let genAlphaString =
 let genChar = Gen.choose(62,127) |> Gen.map char 
 
 
+
 let genByteMain = Gen.choose(0, 255) |> Gen.map byte
 let genByteFieldSeperator = Gen.constant 1uy
 let genByteTagValueSeperator = Gen.constant 61uy
