@@ -19,23 +19,12 @@
  *)
  
 open Fix44.Fields
-open Fix44.Messages
-open Fix44.MsgWriters
-open Fix44.CompoundItems
-
-open Fix44.CompoundItemFactoryFuncs
-open Fix44.MessageFactoryFuncs
-
-
 
 open BenchmarkDotNet.Attributes
 open BenchmarkDotNet.Running
 
 open BenchmarkDotNet.Configs
-open BenchmarkDotNet.Diagnosers
 open BenchmarkDotNet.Jobs
-
-//open BenchmarkDotNet.Attributes.Columns
 
 
 let Dst:byte array =  Array.zeroCreate<byte> 1024
@@ -120,8 +109,6 @@ type BenchmarkIndexedFieldReads () =
     let mutable (bs:byte array) = [||]
 
     // for the purpose of these benchmarks it does not matter if the field is defined as required or optional in the FIX message
-
-
 
     [<Benchmark>]
     member this.IndexComplexNewOrderMultilegMsg () =

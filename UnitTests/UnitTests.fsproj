@@ -18,7 +18,6 @@
     <Compile Include="MonthYearTests.fs" />
     <Compile Include="FieldWriteTests.fs" />
     <Compile Include="WriteReadRoundtripTests.fs" />
-    <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
