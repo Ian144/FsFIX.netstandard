@@ -244,3 +244,5 @@ ModelManifest.xml
 /benchmark/BenchmarkDotNet.Artifacts/results/BenchmarkMsgReadWrite-report.csv
 /benchmark/BenchmarkDotNet.Artifacts/results/BenchmarkMsgReadWrite-report-github.md
 /xxxx.vs/FsFix.sqlite
+/.idea/.idea.FsFIX/.idea
+/FIXCodeGenerator/Properties
