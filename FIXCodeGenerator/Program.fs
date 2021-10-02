@@ -88,7 +88,7 @@ let GenerateFsFIX (fixSpecXmlFile, outDir) =
     use swGroupCompFactoryFuncs = new StreamWriter (makeOutpath "Fix44.CompoundItemFactoryFuncs.fs")
     do CompoundItemGenerator.GenFactoryFuncs constrainedCompoundItemsInDepOrder swGroupCompFactoryFuncs
 
-    // If this was not done then FsFIX can represent the same state in two different ways (optional component is present (Option.Some) but all optional component members are not OR component is not present (Option.None))
+    // If this was not done then FsFIX can represent the same state in two different ways 1. optional component is present (Option.Some) but all optional component members are not present OR 2. component is not present (Option.None))
     // To avoid this ambiguity optional components containing only optional members are 'promoted' to being required, the members are left as optional
     let msgsFinal =
         [   for msg in msgsAfterGroupMerge do
