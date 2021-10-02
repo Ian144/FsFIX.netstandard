@@ -251,7 +251,7 @@ type BenchmarkMsgReadWrite () =
 let main argv =
 
     //BenchmarkRunner.Run<BenchmarkIndexedFieldReads>( DefaultConfig.Instance.With(Job.RyuJitX64) ) |> ignore
-    BenchmarkRunner.Run<BenchmarkMsgReadWrite>( DefaultConfig.Instance.With(Job.RyuJitX64) ) |> ignore
+    BenchmarkRunner.Run<BenchmarkMsgReadWrite>( DefaultConfig.Instance.AddJob(Job.RyuJitX64) ) |> ignore
     
     0
 

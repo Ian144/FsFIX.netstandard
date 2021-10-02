@@ -10,8 +10,8 @@ open Generators
 let private maxTest = 10
 let private endSize = 4
 #else
-let private maxTest = 10000
-let private endSize = 64
+let private maxTest = 100
+let private endSize = 16
 #endif
 
 
